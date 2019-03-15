@@ -7,15 +7,21 @@ namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
-public:
+  public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private:
+  private slots:
+    void on_exit_triggered();
+
+    void on_fm1StartButton_clicked();
+
+    void on_author_triggered();
+
+  private:
     Ui::MainWindow *ui;
 };
 

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>ouR.txt</file>
+    </qresource>
+</RCC>
