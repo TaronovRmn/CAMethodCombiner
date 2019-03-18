@@ -21,7 +21,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->tablets, SIGNAL(currentChanged(int)), this, SLOT(tabSelected()));
     ui->tablets->setCurrentIndex(0);
     selectFm1();
-
 }
 
 MainWindow::~MainWindow() {
