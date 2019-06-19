@@ -30,7 +30,9 @@ SOURCES += \
     FreqMethod1.cpp \
     FreqMethod2.cpp \
     readstat.cpp \
-    SynMinV2.cpp
+    SynMinV2.cpp \
+    dicc.cpp \
+    dic.cpp
 
 HEADERS += \
         mainwindow.h

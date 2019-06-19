@@ -11,6 +11,8 @@ string const STAT_FILE_NAME = "saR.txt";
 string const TBL_FILE_NAME = "stE.txt";
 string const SCALE_FILE_NAME = "enQ.txt";
 string const REF_FILE_NAME = "enU.txt";
+string const DIC_FILE_NAME = "dictionaryStr/w0.txt";
+string const COV_FILE_NAME = "inV.txt";
 
 int readOUR (int & nF, int & nM, QString & name) {
     name = QString::fromStdString(SOLS_FILE_NAME);
@@ -67,6 +69,28 @@ int readENU (QString & name) {
     name = QString::fromStdString(REF_FILE_NAME);
     ifstream fin;
     fin.open(REF_FILE_NAME, ios_base::in);
+    if (!fin.is_open())
+        return 1;
+    fin.close();
+    return 0;
+
+}
+
+int readDIC (QString & name) {
+    name = QString::fromStdString(DIC_FILE_NAME);
+    ifstream fin;
+    fin.open(DIC_FILE_NAME, ios_base::in);
+    if (!fin.is_open())
+        return 1;
+    fin.close();
+    return 0;
+
+}
+
+int readINV (QString & name) {
+    name = QString::fromStdString(COV_FILE_NAME);
+    ifstream fin;
+    fin.open(COV_FILE_NAME, ios_base::in);
     if (!fin.is_open())
         return 1;
     fin.close();
